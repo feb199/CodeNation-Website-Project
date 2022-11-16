@@ -1,4 +1,38 @@
+body {
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+.center {
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.section {
+    padding-top: 110px;
+    padding-bottom: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 15px;
+}
+
+
+.bg-secondary {
+    background: rgb(247, 70, 58) !important;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
 .navigation {
+    position: absolute;
     top: 0;
     background-color: #07085d;
     padding: 15px 100px 0px 100px;
@@ -6,44 +40,60 @@
     right: 0;
     left: 0;
     z-index: 1030;
+    min-height: 37px;
+    height: 50px;
 }
 
 .navBar {
-    float: left;
+    font-weight: 600 !important;
+    position: relative;
+    display: flex;
+    min-width: 500px;
     width: 100%;
     font-size: 93%;
     line-height: normal;
-}
-
-.navBar ul {
-    margin: 0;
-    padding: 10px 10px 0;
-    list-style: none;
-}
-
-.navBar li {
-    float: left;
-    margin: 0;
-    background: white;
-    border-radius: 15px;
-    padding: 0 0 0 9px;
+    height: 100%;
+    align-items: center;
 }
 
 .navBar a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.navBar ul {
+    position: absolute;
+    float: right;
+    margin: 0;
+    padding: 10px 10px 0;
+    list-style: none;
+    right: 0;
+    bottom: 0;
+}
+
+.navBar ul li {
+    position: relative;
+    float: left;
+    margin: 0 5px 0 5px;
+    background: rgb(247, 70, 58);
+    border-radius: 15px;
+    padding: 0 0 0 9px;
+    bottom: 0;
+}
+
+.navBar ul li a, .navBar ul li strong, .navBar ul li span {
+    color: white;
     float: left;
     display: block;
-    padding: 5px 15px 4px;
+    padding: 5px 15px 4px 6px;
+    margin: 0;
 }
 
 /* Commented Backslash Hack
 hides rule from IE5-Mac */
-.navBar a {float:none;}
+.navBar ul li a {float:none;}
 /* End IE5-Mac hack */
-
-.navBar a, .navBar strong, .navBar span {
-    display: block;
-    padding: 5px 15px 4px 6px;
-}
 
 .navBar #active {
     border-radius: 15px 15px 0 0;
@@ -61,5 +111,91 @@ hides rule from IE5-Mac */
     height: 340px;
     border-radius: 15px;
     transform: translateZ(0px);
-    border: 3px solid #eee;
+    border: 3px solid white;
+    background: linear-gradient(37deg, rgb(180, 62, 121) 1%, rgb(247, 70, 58) 100%);
+}
+
+
+.title {
+    margin-top: 30px;
+    color: #fff;
+}
+
+.title a {
+    color: rgb(22, 22, 22);
+    text-decoration: none;
+}
+
+
+.text-gradient-primary {
+    background: linear-gradient(37deg, rgb(180, 62, 121) 1%, rgb(247, 70, 58) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.quickButton {
+    color: white;
+    font-size: 24px;
+    font-weight: 700 !important;
+    margin-bottom: 1.5rem !important;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100%;
+    max-width: 400px;
+    width: 100%;
+    background-size: cover;
+    background-color: #07085d;
+    border-radius: 15px;
+}
+
+.quickButton a {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    font-family: "Poppins", sans-serif;
+    text-transform: capitalize;
+    padding: 13px 45px;
+    border-radius: 35px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    margin-bottom: 15px;
+    background: linear-gradient(37deg, rgb(180, 62, 121) 1%, rgb(247, 70, 58) 100%);
+    border: 0;
+    line-height: 1.5;
+}
+
+
+.white {
+    color: white;
+}
+
+.white a {
+    color: rgb(22, 22, 22);
+}
+
+.black {
+    color: black;
+}
+
+.black a {
+    color: rgb(187, 45, 35);
+}
+
+.large {
+    font-size: 40px;
+}
+
+.medium {
+    font-size: 30px;
+}
+
+.bold {
+    font-weight: 700 !important;
 }
